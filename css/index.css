@@ -1,0 +1,122 @@
+@font-face {
+    font-family: Bauhaus;
+    src: url(fonts/Bauhaus Medium.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Bauhaus;
+    src: url(fonts/BauhausC Medium Bold.ttf);
+    font-weight: bold;
+}
+
+*{
+	font-family: Bauhaus;
+}
+
+html, body{
+	width: 100%;
+	height: 100vh;
+	margin: 0;
+}
+
+.outer {
+  display: table;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: url("../imgs/portada-login.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+.middle {
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+	background: #990d3f; /* Old browsers */
+	background: -moz-linear-gradient(left, #e8755187 0%, #990d3f82 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, #e8755187 0%,#990d3f82 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, #e8755187 0%,#990d3f82 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8755187', endColorstr='#990d3f82',GradientType=1 ); /* IE6-9 */
+}
+
+.middle>img.logo{
+	position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 700px;
+}
+
+.inner {
+	text-align: left;
+	margin-left: auto;
+	margin-right: auto;
+	width: 500px;
+	background-color: #ffffff47;
+    border-radius: 10px;
+    padding: 50px;
+}
+
+#usuario, #pass{
+	width: 100%;
+    border: none;
+    outline: none;
+    padding: 10px 5px;
+    margin-top: 5px;
+    border-radius: 100px;
+    background-color: #ffffff94;
+    padding-left: 45px;
+}
+
+.input-usuario{
+	position:relative;
+}
+
+#icono-usuario, #icono-pass{
+	color: #454545;
+	position: absolute;
+    top: 14px;
+    left: 17px;
+    font-size: 23px;
+}
+
+input[type="submit"]{
+	width: 100%;
+    border: none;
+    padding: 10px 0;
+    border-radius: 50px;
+    background-color: #990D3F;
+    color: white;
+}
+
+.checkbox{
+	margin: 15px 0 15px 10px;
+}
+
+input[type="checkbox"]{
+	-webkit-appearance: none;
+	width: 15px;
+    height: 15px;
+    background-color: #dadada;
+    border: 1px solid #434343;
+    border-radius: 2px;
+    position: relative;
+}
+
+input[type="checkbox"]:checked::after{
+	content: "\f00c";
+	font-family: FontAwesome;
+	color: #383333;
+}
+
+@media (max-width: 750px){
+	.inner{
+		width: 90%;
+	}
+
+	.middle>img.logo{
+		width: 90%;
+	}
+}
